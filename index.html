@@ -26,6 +26,20 @@
             z-index: -1;
         }
 
+        .modal.hidden {
+            display: none;
+        }
+
+        .modal-content {
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 </head>
@@ -45,12 +59,12 @@
     <main class=" mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5  h-[80vh]">
         <section class="text-white sm:flex max-sm:block justify-center items-center text-center w-full h-full">
             <div class="sm:w-1/5 max-sm:w-full text-start text-lg font-semibold sm:block max-sm:flex max-sm:justify-between">
-                <div class="py-20 w-min text-center">
-                    <i class="bi bi-folder-fill text-6xl max-sm:text-xl cursor-pointer"></i>
+                <div class="py-20 w-min text-center">             
+                    <button class="about-button bi bi-folder-fill text-6xl max-sm:text-xl cursor-pointer"></button>
                     <p class="text-base">About</p>
                 </div>
                 <div class="py-20 w-min text-center">
-                    <i class="bi bi-folder-fill text-6xl max-sm:text-xl cursor-pointer"></i>
+                    <button class="projects-button bi bi-folder-fill text-6xl max-sm:text-xl cursor-pointer"></button>
                     <p class="text-base">Projects</p>
                 </div>
             </div>
@@ -98,6 +112,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal About -->
+    <div id="modal-about" class="modal hidden fixed top-0 left-0 w-full h-full flex items-center justify-center">
+        <div class="bg-white p-5 rounded-lg w-3/4 max-w-lg modal-content">
+            <h2 class="text-2xl font-bold mb-4">About</h2>
+            <p>Informações sobre Lucas Alves...</p>
+            <button class="close-modal bg-red-500 text-white px-4 py-2 rounded mt-4">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal Projects -->
+    <div id="modal-projects" class="modal hidden fixed top-0 left-0 w-full h-full flex items-center justify-center">
+        <div class="bg-white p-5 rounded-lg w-3/4 max-w-lg modal-content">
+            <h2 class="text-2xl font-bold mb-4">Projects</h2>
+            <p>Informações sobre os projetos de Lucas Alves...</p>
+            <button class="close-modal bg-red-500 text-white px-4 py-2 rounded mt-4">Close</button>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="app.js"></script>
