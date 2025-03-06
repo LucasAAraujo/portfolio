@@ -207,33 +207,37 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="app.js"></script>
     <script>
-        function updateDateTime() {
+        let currentLang = 'pt';
+    
+        function updateDateTime(lang = 'pt') {
             const now = new Date();
-            const hour = now.toLocaleTimeString();
-            const dateTime = now.toLocaleDateString() + ' ';
-
+            const hour = now.toLocaleTimeString(lang === 'pt' ? 'pt-BR' : 'en-US');
+            const dateTime = now.toLocaleDateString(lang === 'pt' ? 'pt-BR' : 'en-US') + ' ';
+    
             document.getElementById('hour').textContent = hour;
             document.getElementById('dataTime').textContent = dateTime;
         }
-
-        updateDateTime();
-
-        setInterval(updateDateTime, 1000);
-
+    
+        updateDateTime(currentLang);
+    
+        setInterval(() => updateDateTime(currentLang), 1000);
+    
         // Language switcher
         const btnPT = document.getElementById('btn-pt');
         const btnEN = document.getElementById('btn-en');
         const elements = document.querySelectorAll('[data-pt]');
-
+    
         function setLanguage(lang) {
+            currentLang = lang;
             elements.forEach(el => {
                 el.innerHTML = el.getAttribute(`data-${lang}`);
             });
+            updateDateTime(lang);
         }
-
+    
         btnPT.addEventListener('click', () => setLanguage('pt'));
         btnEN.addEventListener('click', () => setLanguage('en'));
-
+    
         // Set default language to Portuguese
         setLanguage('pt');
     </script>
