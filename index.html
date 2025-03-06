@@ -40,18 +40,37 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-down {
+            animation: slideDown 1s ease-out forwards;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-gradient-to-b from-[#171717] to-[#0a0a0a] h-full w-full">
     <div id="particles-js"></div>
-    <header class="mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5">
-        <nav class="flex justify-between items-center my-4 max-sm:text-xs sm:text-2xl text-white">
+    <header class="mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5 animate-on-load">
+        <nav class="flex justify-between items-center my-4 max-sm:text-xs sm:text-xl text-white">
             <div class="font-bold text-red-600">&lt;<span class="text-white">LucasAlves</span>/&gt;</div>
             <ul class="flex space-x-4">
                 <li>
-                    <button id="btn-pt" class="text-white cursor-pointer">PT</button> | 
-                    <button id="btn-en" class="text-white cursor-pointer">EN</button>
+                    <button id="btn-pt" class="text-white cursor-pointer">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1e7-1f1f7.svg" alt="PT" class="inline w-6 h-6">
+                    </button> | 
+                    <button id="btn-en" class="text-white cursor-pointer">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1fa-1f1f8.svg" alt="EN" class="inline w-6 h-6">
+                    </button></button>
                 </li>
                 <li id="hour"></li>
                 <li id="dataTime"></li>
@@ -60,7 +79,7 @@
         </nav>
     </header>
 
-    <main class="mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5 h-[80vh]">
+    <main class="mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5 h-[80vh] animate-on-load">
         <section class="text-white sm:flex max-sm:block justify-center items-center text-center w-full h-full">
             <div class="sm:w-1/5 max-sm:w-full text-start text-lg font-semibold sm:block max-sm:flex max-sm:justify-between">
                 <div class="py-20 w-max text-center">
@@ -77,18 +96,17 @@
                 <h1 class="sm:my-10 max-sm:my-5 sm:text-5xl max-sm:text-3xl font-bold" data-pt="Me chamo <span class='text-red-600'>Lucas Alves</span>, <br> Desenvolvedor de Software." data-en="I'm <span class='text-red-600'>Lucas Alves</span>, <br> Software Developer.">Me chamo <span class="text-red-600">Lucas Alves</span>, <br> Desenvolvedor de Software.</h1>
                 <p class="text-[#edeae1]" data-pt="Sou Desenvolvedor de Software Full-Stack com foco principal em Laravel, React e Python, e também apaixonado por tecnologia e inovação." data-en="I'm a Full-Stack Software Developer with a main focus on Laravel, React, and Python, and also passionate about technology and innovation.">Sou Desenvolvedor de Software Full-Stack com foco principal em Laravel, React e Python, e também apaixonado por tecnologia e inovação.</p>
                 <div class="flex flex-wrap justify-center sm:justify-start gap-5 mt-5 text-white">
-                    <i class="devicon-php-plain text-[#787cb5] text-4xl cursor-pointer" title="PHP"></i>
-                    <i class="devicon-laravel-plain text-[#f05340] text-4xl cursor-pointer" title="Laravel"></i>
-                    <i class="devicon-python-plain text-[#3776ab] text-4xl cursor-pointer" title="Python"></i>
-                    <i class="devicon-pandas-plain text-[#150458] text-4xl cursor-pointer" title="Pandas"></i>
-                    <i class="devicon-javascript-plain text-[#f7df1e] text-4xl cursor-pointer" title="JavaScript"></i>
-                    <i class="devicon-react-original text-[#61dafb] text-4xl cursor-pointer" title="React"></i>
-                    <i class="devicon-mysql-plain text-[#4479a1] text-4xl cursor-pointer" title="MySQL"></i>
-                    <i class="devicon-mongodb-plain text-[#47a248] text-4xl cursor-pointer" title="MongoDB"></i>
-                    <i class="devicon-azure-plain text-[#0089d6] text-4xl cursor-pointer" title="Azure"></i>
+                    <i class="devicon-php-plain text-[#787cb5] text-2xl sm:text-4xl cursor-pointer" title="PHP"></i>
+                    <i class="devicon-laravel-plain text-[#f05340] text-2xl sm:text-4xl cursor-pointer" title="Laravel"></i>
+                    <i class="devicon-python-plain text-[#3776ab] text-2xl sm:text-4xl cursor-pointer" title="Python"></i>
+                    <i class="devicon-pandas-plain text-[#150458] text-2xl sm:text-4xl cursor-pointer" title="Pandas"></i>
+                    <i class="devicon-javascript-plain text-[#f7df1e] text-2xl sm:text-4xl cursor-pointer" title="JavaScript"></i>
+                    <i class="devicon-react-original text-[#61dafb] text-2xl sm:text-4xl cursor-pointer" title="React"></i>
+                    <i class="devicon-mysql-plain text-[#4479a1] text-2xl sm:text-4xl cursor-pointer" title="MySQL"></i>
+                    <i class="devicon-mongodb-plain text-[#47a248] text-2xl sm:text-4xl cursor-pointer" title="MongoDB"></i>
+                    <i class="devicon-azure-plain text-[#0089d6] text-2xl sm:text-4xl cursor-pointer" title="Azure"></i>
                 </div>
             </div>
-            
             <div class="w-1/5 max-sm:w-full max-sm:flex text-4xl text-end justify-center max-sm:justify-between max-sm:mt-10 items-center">
                 <div class="cursor-pointer py-4">
                     <a href="https://www.linkedin.com/in/lucasalves000/"><i class="bi bi-linkedin"></i></a>
@@ -103,7 +121,7 @@
         </section>
     </main>
 
-    <footer class="flex justify-center items-center text-white w-full pb-5">
+    <footer class="flex justify-center items-center text-white w-full pb-5 animate-on-load">
         <div class="grid grid-cols-3 max-sm:grid-cols-2 w-full text-center content-baseline">
             <div class="mt-10 text-sm">
                 <p>Lucas Alves &copy; 2025</p>
@@ -140,7 +158,7 @@
             <h2 class="text-2xl font-bold flex" data-pt="Meus projetos:" data-en="My projects:">Meus projetos:</h2>
             <button class="close-modal bg-red-500 text-white px-4 py-2 rounded cursor-pointer hover:font-bold">X</button>
             </div>  
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5 text-sm">
                 <div class="bg-[#0a0a0a] p-4 rounded-lg shadow-md w-full">
                     <div class="flex justify-between items-center">
                     <h3 class="text-lg font-bold" data-pt="Banco" data-en="Bank">Banco</h3>

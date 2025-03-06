@@ -111,6 +111,13 @@ particlesJS('particles-js', {
 
 
   document.addEventListener('DOMContentLoaded', function () {
+    const elementsToAnimate = document.querySelectorAll('.animate-on-load');
+
+    elementsToAnimate.forEach(element => {
+        element.classList.add('slide-down');
+    });
+
+    // Existing modal and language switcher code
     const aboutButton = document.querySelector('.about-button');
     const projectsButton = document.querySelector('.projects-button');
     const modalAbout = document.getElementById('modal-about');
@@ -141,4 +148,20 @@ particlesJS('particles-js', {
             setTimeout(() => event.target.classList.add('hidden'), 300);
         }
     });
+
+    const btnPT = document.getElementById('btn-pt');
+    const btnEN = document.getElementById('btn-en');
+    const elements = document.querySelectorAll('[data-pt]');
+
+    function setLanguage(lang) {
+        elements.forEach(el => {
+            el.innerHTML = el.getAttribute(`data-${lang}`);
+        });
+    }
+
+    btnPT.addEventListener('click', () => setLanguage('pt'));
+    btnEN.addEventListener('click', () => setLanguage('en'));
+
+    // Set default language to Portuguese
+    setLanguage('pt');
 });
