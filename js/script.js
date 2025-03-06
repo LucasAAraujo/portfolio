@@ -7,25 +7,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
     aboutButton.addEventListener('click', function () {
         modalAbout.classList.remove('hidden');
+        setTimeout(() => modalAbout.classList.add('show'), 10);
     });
 
     projectsButton.addEventListener('click', function () {
         modalProjects.classList.remove('hidden');
+        setTimeout(() => modalProjects.classList.add('show'), 10);
     });
 
     closeModalButtons.forEach(button => {
         button.addEventListener('click', function () {
-            modalAbout.classList.add('hidden');
-            modalProjects.classList.add('hidden');
+            const modal = button.closest('.modal');
+            modal.classList.remove('show');
+            setTimeout(() => modal.classList.add('hidden'), 300);
         });
     });
 
     window.addEventListener('click', function (event) {
-        if (event.target === modalAbout) {
-            modalAbout.classList.add('hidden');
-        }
-        if (event.target === modalProjects) {
-            modalProjects.classList.add('hidden');
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('show');
+            setTimeout(() => event.target.classList.add('hidden'), 300);
         }
     });
+
+    // Language switcher
+    const btnPT = document.getElementById('btn-pt');
+    const btnEN = document.getElementById('btn-en');
+    const elements = document.querySelectorAll('[data-pt]');
+
+    btnPT.addEventListener('click', function () {
+        elements.forEach(el => {
+            el.innerHTML = el.getAttribute('data-pt');
+        });
+    });
+
+    btnEN.addEventListener('click', function () {
+        elements.forEach(el => {
+            el.innerHTML = el.getAttribute('data-en');
+        });
+    });
+
+    // Set default language to PT
+    btnPT.click();
 });
