@@ -58,7 +58,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 </head>
-<body class="bg-gradient-to-b from-[#171717] to-[#0a0a0a] h-full w-full">
+<body class="bg-gradient-to-b from-[#171717] to-[#0a0a0a] min-h-screen w-full">
     <div id="particles-js"></div>
     <header class="mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5 animate-on-load">
         <nav class="flex justify-between items-center my-4 max-sm:text-xs sm:text-xl text-white">
@@ -79,14 +79,14 @@
         </nav>
     </header>
 
-    <main class="mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5 h-[80vh] animate-on-load">
+    <main class="mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-54 p-5 max-sm:py-0 h-[80vh] max-sm:h-[70vh] animate-on-load">
         <section class="text-white sm:flex max-sm:block justify-center items-center text-center w-full h-full">
-            <div class="sm:w-1/5 pt-20 max-sm:w-full text-start text-lg  py-10font-semibold sm:block max-sm:flex max-sm:justify-between">
-                <div class="py-20 w-max text-center group">
+            <div class="sm:w-1/5 sm:pt-20 max-sm:w-full text-start text-lg  py-10font-semibold sm:block max-sm:flex max-sm:justify-between">
+                <div class="py-5 sm:py-20 w-max text-center group">
                     <button class="about-button bi bi-folder-fill text-6xl max-sm:text-xl cursor-pointer group-hover:animate-pulse"></button>
                     <p class="text-base" data-pt="Sobre mim" data-en="About">Sobre mim</p>
                 </div>
-                <div class="py-20 w-max text-center group">
+                <div class="py-5 sm:py-20 w-max text-center group">
                     <button class="projects-button bi bi-folder-fill text-6xl max-sm:text-xl cursor-pointer group-hover:animate-pulse"></button>
                     <p class="text-base" data-pt="Projetos" data-en="Projects">Projetos</p>
                 </div>
@@ -95,21 +95,22 @@
                 <h3 class="my-3 text-2xl mas-sm:text-xl" data-pt="Olá! &#128075" data-en="Hi, there! &#128075">Olá! &#128075</h3>
                 <h1 class="sm:my-10 max-sm:my-5 sm:text-5xl md:text-7xl max-sm:text-3xl font-bold" data-pt="Sou <span class='text-red-600'>Lucas Alves</span>, <br> Desenvolvedor de Software." data-en="I'm <span class='text-red-600'>Lucas Alves</span>, <br> Software Developer.">Me chamo <span class="text-red-600">Lucas Alves</span>, <br> Desenvolvedor de Software.</h1>
                 <p class="text-[#edeae1]" data-pt="Sou Desenvolvedor de Software Full-Stack com foco principal em Laravel, React e Python, e também apaixonado por tecnologia e inovação." data-en="I'm a Full-Stack Software Developer with a main focus on Laravel, React, and Python, and also passionate about technology and innovation.">Sou Desenvolvedor de Software Full-Stack com foco principal em Laravel, React e Python, e também apaixonado por tecnologia e inovação.</p>
-                <div class="flex flex-wrap justify-center sm:justify-start gap-5 mt-5 text-white">
+                <div class="flex flex-wrap max-sm:hidden justify-center sm:justify-start gap-5 mt-5 text-white">
                     <i class="devicon-php-plain text-[#787cb5] text-2xl sm:text-4xl cursor-pointer" title="PHP"></i>
                     <i class="devicon-laravel-plain text-[#f05340] text-2xl sm:text-4xl cursor-pointer" title="Laravel"></i>
                     <i class="devicon-python-plain text-[#3776ab] text-2xl sm:text-4xl cursor-pointer" title="Python"></i>
                     <i class="devicon-pandas-plain text-[#150458] text-2xl sm:text-4xl cursor-pointer" title="Pandas"></i>
                     <i class="devicon-javascript-plain text-[#f7df1e] text-2xl sm:text-4xl cursor-pointer" title="JavaScript"></i>
                     <i class="devicon-react-original text-[#61dafb] text-2xl sm:text-4xl cursor-pointer" title="React"></i>
+                    <i class="devicon-vuejs-plain text-[#42b883] text-2xl sm:text-4xl cursor-pointer" title="Vue.js"></i>
                     <i class="devicon-mysql-plain text-[#4479a1] text-2xl sm:text-4xl cursor-pointer" title="MySQL"></i>
                     <i class="devicon-mongodb-plain text-[#47a248] text-2xl sm:text-4xl cursor-pointer" title="MongoDB"></i>
                     <i class="devicon-azure-plain text-[#0089d6] text-2xl sm:text-4xl cursor-pointer" title="Azure"></i>
                 </div>
             </div>
-            <div class="w-1/5 pt-20 max-sm:w-full max-sm:flex text-4xl text-end justify-center max-sm:justify-between max-sm:mt-10 items-center">
+            <div class="w-1/5 sm:pt-20 max-sm:w-full max-sm:flex text-3xl sm:text-4xl text-end justify-center max-sm:justify-between max-sm:mt-10 items-center">
                 <div class="cursor-pointer py-4 hover:animate-pulse">
-                    <a href="https://www.linkedin.com/in/lucasalves000/"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/lucasalves000"><i class="bi bi-linkedin"></i></a>
                 </div>
                 <div class="cursor-pointer py-4 hover:animate-pulse">
                     <a href="https://github.com/LucasAAraujo"><i class="fa-brands fa-github rounded-full"></i></a>
@@ -121,16 +122,16 @@
         </section>
     </main>
 
-    <footer class="flex justify-center items-center text-white w-full pb-5 animate-on-load">
+    <footer class="flex justify-center items-center text-white w-full sm:pb-5 animate-on-load">
         <div class="grid grid-cols-3 max-sm:grid-cols-2 w-full text-center content-baseline">
             <div class="mt-10 text-sm">
                 <p>Lucas Alves &copy; 2025</p>
             </div>
             <div class="w-11/12 h-1 bg-red-600 mt-10 max-sm:hidden"></div>
-            <div class="block text-center">
+            <div class="block text-center text-xs sm:text-sm">
                 <p class="pb-3" data-pt="ENTRE EM CONTATO" data-en="GET IN TOUCH">ENTRE EM CONTATO</p>
-                <p class="text-sm font-bold">+55 (62) 99851-8716</p>
-                <p class="text-sm font-bold">lucasalves3.0@hotmail.com</p>
+                <p class="font-bold">+55 (62) 99851-8716</p>
+                <p class="font-bold">lucasalves3.0@hotmail.com</p>
             </div>
         </div>
     </footer>
@@ -142,8 +143,8 @@
             <h2 class="text-2xl font-bold flex ml-3" data-pt="Sobre mim" data-en="About">Sobre mim</h2>
             <button class="close-modal bg-red-500 text-white px-4 py-2 rounded cursor-pointer hover:font-bold">X</button>
             </div>
-            <p class="mt-5 text-justify p-3 font-medium" data-pt="Olá! Meu nome é Lucas Alves, tenho 24 anos e sou Desenvolvedor de Software com mais de 1 ano de experiência.<br> Sou formado em Análise e Desenvolvimento de Sistemas e, atualmente, estou cursando pós-graduação (Lato Sensu) em Engenharia de Software, com especialização em Inteligência Artificial, focando em Machine Learning e Data Science. Trabalho principalmente com a stack Laravel e React, além de MySQL e InfluxDB." data-en="Hello! My name is Lucas Alves, I am 24 years old and I am a Software Developer with over 1 year of experience.<br> I have a degree in Systems Analysis and Development and I am currently pursuing a postgraduate degree (Lato Sensu) in Software Engineering, specializing in Artificial Intelligence, focusing on Machine Learning and Data Science. I mainly work with the Laravel and React stack, as well as MySQL and InfluxDB.">
-            Olá! Meu nome é Lucas Alves, tenho 24 anos e sou Desenvolvedor de Software com mais de 1 ano de experiência.<br> Sou formado em Análise e Desenvolvimento de Sistemas e, atualmente, estou cursando pós-graduação (Lato Sensu) em Engenharia de Software, com especialização em Inteligência Artificial, focando em Machine Learning e Data Science. Trabalho principalmente com a stack Laravel e React, além de MySQL e InfluxDB.
+            <p class="mt-5 text-justify p-3 font-medium" data-pt="Atuo como desenvolvedor Full-Stack com foco em Python, Laravel e React. Sou formado em Análise e Desenvolvimento de Sistemas e atualmente estou fazendo pós-graduação (Lato Sensu) em Engenharia de Software. Sou um entusiasta em tecnologia, Machine Learning e Inteligência Artificial. Amo estudar tudo sobre tecnologia e estou sempre buscando me aperfeiçoar como profissional." data-en="I work as a Full-Stack developer with a focus on Python, Laravel, and React. I have a degree in Systems Analysis and Development and I am currently pursuing a postgraduate degree (Lato Sensu) in Software Engineering. I am an enthusiast in technology, Machine Learning, and Artificial Intelligence. I love studying everything about technology and I am always looking to improve myself as a professional.">
+            Atuo como desenvolvedor Full-Stack com foco em Python, Laravel e React. Sou formado em Análise e Desenvolvimento de Sistemas e atualmente estou fazendo pós-graduação (Lato Sensu) em Engenharia de Software. Sou um entusiasta em tecnologia, Machine Learning e Inteligência Artificial. Amo estudar tudo sobre tecnologia e estou sempre buscando me aperfeiçoar como profissional.
             </p>
             <div class="mt-5 text-center">
                 <a href="assets/LucasAlves.pdf" class="bg-red-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-red-700"> <i class="bi bi-filetype-pdf"></i> Baixe meu Currículo/CV</a>
@@ -152,6 +153,7 @@
     </div>
 
     <!-- Modal Projetos -->
+     
     <div id="modal-projects" class="modal hidden fixed top-0 left-0 w-full h-full flex items-center justify-center backdrop-blur-sm">
         <div class="bg-[#171717] p-5 rounded-lg w-4/5 max-w-4xl modal-content opacity-80 shadow-2xl text-white">
             <div class="flex justify-between items-center border-b border-[#8c8c8c] pb-2">
@@ -159,10 +161,10 @@
             <button class="close-modal bg-red-500 text-white px-4 py-2 rounded cursor-pointer hover:font-bold">X</button>
             </div>  
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5 text-sm">
-                <div class="bg-[#0a0a0a] p-4 rounded-lg shadow-md w-full">
+                <div clas</div>s="bg-[#0a0a0a] p-4 rounded-lg shadow-md w-full">
                     <div class="flex justify-between items-center">
                     <h3 class="text-lg font-bold" data-pt="Banco" data-en="Bank">Banco</h3>
-                    <a href="https://github.com/LucasAAraujo/Banco" target="_blank" class="text-red-600"></a>
+                    <a href="https://github.com/LucasAAraujo/Banco" target="_blank" class="text-red-600">
                         <i class="fas fa-arrow-right hover:text-red-600 cursor-pointer"></i>
                     </a>
                     </div>
@@ -174,7 +176,7 @@
                 <div class="bg-[#0a0a0a] p-4 rounded-lg shadow-md w-full">
                     <div class="flex justify-between items-center">
                     <h3 class="text-lg font-bold" data-pt="Registro de Eventos" data-en="Event Registration">Registro de Eventos</h3>
-                    <a href="https://github.com/LucasAAraujo/Event-Registration" target="_blank" class="text-red-600"></a>
+                    <a href="https://github.com/LucasAAraujo/Event-Registration" target="_blank" class="text-red-600">
                         <i class="fas fa-arrow-right hover:text-red-600 cursor-pointer"></i>
                     </a>
                     </div>
@@ -187,7 +189,7 @@
                 <div class="bg-[#0a0a0a] p-4 rounded-lg shadow-md w-full">
                     <div class="flex justify-between items-center">
                     <h3 class="text-lg font-bold" data-pt="Blog" data-en="Blog">Blog</h3>
-                    <a href="https://github.com/LucasAAraujo/php_blog" target="_blank" class="text-red-600"></a>
+                    <a href="https://github.com/LucasAAraujo/php_blog" target="_blank" class="text-red-600">
                         <i class="fas fa-arrow-right hover:text-red-600 cursor-pointer"></i>
                     </a>
                     </div>
